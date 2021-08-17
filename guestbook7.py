@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, Date
 
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://webadmin:SPYatb32373@node1247-rachpython.th.app.ruk-com.cloud:5432/testdb'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://webadmin:SPYatb32373@node1247-rachpython.th.app.ruk-com.cloud:11001/testdb'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://webadmin:NQMkxn32466@node17343-thanapongsakorn.app.ruk-com.cloud:5432/mydb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -20,7 +20,6 @@ class Comments(db.Model):
 def index():
     result = Comments.query.all()
     return render_template('index7.html', result=result)
-    #return 'Hello world'   
 
 
 @app.route('/sign')
